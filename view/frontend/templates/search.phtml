@@ -1,0 +1,46 @@
+<?php
+/**
+ * CedCommerce
+ *
+ * NOTICE OF LICENSE
+ *
+ * This source file is subject to the End User License Agreement (EULA)
+ * that is bundled with this package in the file LICENSE.txt.
+ * It is also available through the world-wide-web at this URL:
+ * https://cedcommerce.com/license-agreement.txt
+ *
+ * @category    Ced
+ * @package     Ced_Ced_CsMultiSellerImportExport
+ * @author      CedCommerce Core Team <connect@cedcommerce.com>
+ * @copyright   Copyright CedCommerce (https://cedcommerce.com/)
+ * @license     https://cedcommerce.com/license-agreement.txt
+ */
+?>
+<?= $this->getChildHtml('store_switcher');?>
+<div class="row">
+	<div class="col-md-12" style="margin-top: 10px;">
+		<div class="panel panel-default">
+			<div class="content-header panel-heading col-md-12 uptransform">
+				<h3 class="icon-head head-products col-md-6"><?= __('Select and Sell Products') ?></h3>
+				<a href="<?= $this->getUrl('csmultisellerimport/import/index'); ?>" class="upload"><?= __('Upload CSV') ?></a>
+			</div>
+			<div class="panel-body">
+				<?= $this->getGridHtml() ?>
+			</div>
+		</div>
+	</div>
+</div>
+<script>
+var BLANK_URL = '<?= $this->getJsUrl() ?>blank.html';
+var BLANK_IMG = '<?= $this->getJsUrl() ?>spacer.gif';
+var BASE_URL = '<?= $this->getUrl('*') ?>';
+var SKIN_URL = '<?= $this->getSkinUrl() ?>';
+var FORM_KEY = '<?= $this->getFormKey() ?>';
+</script>
+<style>
+    .upload{
+        float: right;
+        color: white !important;
+        font-size: 18px;
+    }
+</style>
